@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ComHomeComtroller {
 
-	@RequestMapping("/usr/home/main")
+	@RequestMapping("/com/home/main")
 	public String showMain() {
-		return "adm/home/main";
+		return "com/home/main";
 	}
 	
 }

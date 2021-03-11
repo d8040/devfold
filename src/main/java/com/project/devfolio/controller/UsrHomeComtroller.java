@@ -8,7 +8,7 @@ public class UsrHomeComtroller {
 
 	@RequestMapping("/usr/home/main")
 	public String showMain() {
-		return "adm/home/main";
+		return "usr/home/main";
 	}
 	
 }
