@@ -16,7 +16,8 @@ CREATE TABLE `member`(
     `email` CHAR(100) NOT NULL,
     `cellphoneNo` CHAR(20) NOT NULL,
     birth DATETIME NOT NULL,
-    sex CHAR(10) NOT NULL
+    sex CHAR(10) NOT NULL,
+    remark TEXT, 
 );
 
 ALTER TABLE `member` ADD UNIQUE INDEX (authKey);
