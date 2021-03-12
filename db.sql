@@ -17,7 +17,7 @@ CREATE TABLE `member`(
     `cellphoneNo` CHAR(20) NOT NULL,
     birth DATETIME NOT NULL,
     sex CHAR(10) NOT NULL,
-    remark TEXT, 
+    remark TEXT
 );
 
 ALTER TABLE `member` ADD UNIQUE INDEX (authKey);
@@ -31,6 +31,41 @@ CREATE TABLE board (
     `name` CHAR(10) NOT NULL UNIQUE
 );
 
+# 공지사항 게시판 추가
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`code` = 'notice',
+`name` = '공지사항';
+
+# 포트폴리오 게시판 추가
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`code` = 'potfolio',
+`name` = '포트폴리오';
+
+# 채용 게시판 추가
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`code` = 'recruit',
+`name` = '채용';
+
+# 취업톡톡 게시판 추가
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`code` = 'freeWork',
+`name` = '취업톡톡';
+
+# 취업톡톡 게시판 추가
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`code` = 'freeDev',
+`name` = '개발톡톡';
+
 # 게시물 테이블 생성
 CREATE TABLE article (
     id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -41,6 +76,7 @@ CREATE TABLE article (
     title CHAR(100) NOT NULL,
     `body` TEXT NOT NULL
 );
+
 
 # 좋아요 테이블 추가
 CREATE TABLE `like` (
